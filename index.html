@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Flipped Background Image</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Make page scrollable */
+        }
+
+        .bg-container {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-image: url('your-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            transform: scaleX(-1);
+            z-index: -1;
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container"></div>
+    <div class="content">
+        <h1>Scroll down to see the effect</h1>
+        <p>This content scrolls while the image stays fixed, halfway down the page and flipped horizontally.</p>
+    </div>
+
+</body>
+</html>
